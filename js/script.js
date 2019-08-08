@@ -1,3 +1,4 @@
+{
 function playGame(playerInput) {
     clearMessages();
     function getMoveName(argMoveId) {
@@ -21,10 +22,10 @@ function playGame(playerInput) {
             printMessage('Ja wybrałem ' + argComputerMove + ', Ty ' + argPlayerMove + '. Remis!');
         }
     }
-    let randomNumber = Math.floor(Math.random() * 3 + 1);
-    let argComputerMove = getMoveName(randomNumber);
-    let argPlayerMove = getMoveName(playerInput);
-    displayResult(argComputerMove, argPlayerMove);
+    const randomNumber = Math.floor(Math.random() * 3 + 1);
+        argComputerMove = getMoveName(randomNumber);
+        argPlayerMove = getMoveName(playerInput);
+        displayResult(argComputerMove, argPlayerMove);
 }
 document.getElementById('play-rock').addEventListener('click', function() {
     playGame(1);
@@ -35,3 +36,4 @@ document.getElementById('play-paper').addEventListener('click', function() {
 document.getElementById('play-scissors').addEventListener('click', function() {
     playGame(3);
 });
+}
