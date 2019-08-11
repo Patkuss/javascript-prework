@@ -1,7 +1,7 @@
 {
-function playGame(playerInput) {
+const playGame = function (playerInput) {
     clearMessages();
-    function getMoveName(argMoveId) {
+    const getMoveName = function (argMoveId) {
         if (argMoveId === 1) {
             return 'kamień';
         } else if (argMoveId === 2) {
@@ -13,7 +13,7 @@ function playGame(playerInput) {
             return 'nieznany ruch';
         }
     }
-    function displayResult(argComputerMove, argPlayerMove) {
+    const displayResult = function (argComputerMove, argPlayerMove) {
         if ((argComputerMove === 'kamień' && argPlayerMove === 'papier') || (argComputerMove === 'papier' && argPlayerMove === 'nożyce') || (argComputerMove === 'nożyce' && argPlayerMove === 'kamień')) {
             printMessage('Ja wybrałem ' + argComputerMove + ', Ty ' + argPlayerMove + '. Wygrywasz!');
         } else if ((argComputerMove === 'kamień' && argPlayerMove === 'nożyce') || (argComputerMove === 'papier' && argPlayerMove === 'kamień') || 'Ja wybrałem ' + (argComputerMove + ', Ty ' + argPlayerMove + '. Przegrywasz!')) {
